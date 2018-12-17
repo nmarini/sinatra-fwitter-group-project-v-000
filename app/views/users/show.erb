@@ -1,0 +1,9 @@
+<h2>Hi!</h2>
+
+<h4>Your Tweets:</h4>
+
+<p>
+  <% @user.tweets.each.with_index(1) do |tweet, index| %>
+  <p><a href="/tweets/<%=tweet.id%>"><%= index %>. <%= tweet.content %></a></p>
+  <% end %>
+</p>
